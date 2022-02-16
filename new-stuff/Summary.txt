@@ -1,0 +1,28 @@
+2.6.5 Collaborating summary
+Congratulations, you now know the few basic commands and functionality needed to collaborate with Git and GitHub. It takes a bit of practice, but it is very powerful.
+
+95% of the time, this is all you are doing:
+
+Change some code.
+git s
+git d
+git  com "My commit message"`
+git p
+(the git s and git d are useful to check you have changed only what you think you have changed).
+
+If GitHub does not allow you to push then on GitHub check your colleague’s latest commits that you haven’t yet seen, and if they look fine then:
+
+git fetch
+git rebase
+(If you don’t agree with your colleague’s latest commits, then still rebase them but then manually edit the files to be what you want. Though if you want to completely cancel their commits see git revert in the Advanced section below).
+
+If conflicts, then
+
+git rebase --abort
+git merge
+fix the conflicts manually and then
+
+git add <conflicted file(s)>
+git com "Message to explain what you did"
+git p
+Change some code and repeat!
