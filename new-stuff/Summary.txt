@@ -4,10 +4,10 @@ Congratulations, you now know the few basic commands and functionality needed to
 95% of the time, this is all you are doing:
 
 Change some code.
-git s
-git d
-git  com "My commit message"`
-git p
+git status
+git diff
+git  commit -a -m "My commit message"`
+git push
 (the git s and git d are useful to check you have changed only what you think you have changed).
 
 If GitHub does not allow you to push then on GitHub check your colleague’s latest commits that you haven’t yet seen, and if they look fine then:
@@ -26,3 +26,29 @@ git add <conflicted file(s)>
 git com "Message to explain what you did"
 git p
 Change some code and repeat!
+
+
+
+ADVANCED TIPS
+If you’ve changed some code but have not committed it, and then maybe got in a mess and just want to go back to your last commit, you can stash your changes
+
+git stash
+and to include a message (for your future self):
+
+git stash save "Message"
+This stashes them away such that they can be retrieved later if necessary. This is handy. You may think you don’t want to keep those changes, but sometimes you may later wish you had kept them somehwere. Note this is only for files that Git is tracking (i.e. files that have been added at some point).
+
+To retrieve the last stash, you ‘pop’ them back into your working copy with: git stash pop
+
+You can have multiple stashes, seen by doing:
+
+git stash list
+To deal with these, and other aspects of stash, see this tutorial.
+
+If you are really really sure that you do not want to keep your recent changes, see the ‘Undoing changes not yet committed’ section near the end of this module.
+
+See:
+https://www.quantitative-biology.ca/git-and-github.html#using-git-and-github-to-share-your-own-code
+if you ever need to retrieve an old version
+
+Start at "working on a new branch" in link if you ever need to do that
